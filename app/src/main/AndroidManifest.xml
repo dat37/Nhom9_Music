@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vn.name.dat.nhom9_music">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".Service_Local.ChannelNotification"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Nhom9_Music"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Fragment.Fragment_NgheSi"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.Fragment_ThuVien_YeuThich"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.Fragment_ThuVien_NgheSi"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.Fragment_ThuVien_Playlist"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.Fragment_Thu_Vien"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PlayNhacActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DanhsachbaihatActivity"
+            android:exported="false" />
+        <!-- <activity android:name=".Fragment.InsertThuVienPlayListActivity" /> -->
+        <activity android:name=".Activity.DangNhapActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.HomeActivity" /> <!-- <activity android:name=".Activity.DangKyActivity" /> -->
+        <activity
+            android:name=".Activity.KhoiDongActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Service_Local.ForegroundServiceControl" />
+
+        <receiver android:name=".Service_Local.BroadcastReceiverAction" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearlayout"
+        android:orientation="vertical">
+
+        <fragment
+            android:name="vn.name.dat.nhom9_music.Fragment.Fragment_Playlist"
+            android:id="@+id/fragmentplaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </fragment>
+        <fragment
+            android:name="vn.name.dat.nhom9_music.Fragment.Fragment_NgheSi"
+            android:id="@+id/fragmentnghesi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </fragment>
+        <fragment
+            android:name="vn.name.dat.nhom9_music.Fragment.Fragment_PhoBien"
+            android:id="@+id/fragmentphobien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </fragment>
+
+    </LinearLayout>
+
+</ScrollView>
